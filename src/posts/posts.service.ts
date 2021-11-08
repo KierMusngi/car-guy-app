@@ -5,30 +5,44 @@
  */
 import { Post } from './post.interface';
 import { Posts } from './posts.interface';
+import { User } from '../users/user.interface';
 
 /**
  * In-Memory Store
  */
 
+let user: User = {
+    id: 1,
+    name: "Seller O Seller",
+    location: "Pasay City",
+    contactNumber: "0912-345-6789",
+    email: "example@email.com",
+    website: "www.example.com",
+    reputation: 10
+};
+
 let posts: Posts = {
     1: {
         id: 1,
         name: "IACV",
+        images: "test image",
         description: "always broken",
-        author: "John Doe"
-   },
-   2: {
-       id: 1,
-       name: "Spoon Side Mirrors",
-       description: "cool af",
-       author: "John Doe"
-   },
-   3: {
-       id: 1,
-       name: "Spoon N1 Muffler",
-       description: "loud af",
-       author: "John Doe"
-   }
+        author: user
+    },
+    2: {
+        id: 1,
+        name: "Spoon Side Mirrors",
+        images: "test image",
+        description: "cool af",
+        author: user
+    },
+    3: {
+        id: 1,
+        name: "Spoon N1 Muffler",
+        images: "test image",
+        description: "loud af",
+        author: user
+    }
  };
 
 /**
