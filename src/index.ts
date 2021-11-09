@@ -7,6 +7,7 @@
  import cors from "cors";
  import helmet from "helmet";
  import { postRouter } from './posts/posts.router';
+ import { userRouter } from './users/users.router';
  
 import { errorHandler } from "./middleware/error.middleware";
 import { notFoundHandler } from "./middleware/not-found.middleware";
@@ -33,6 +34,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use("/api/posts", postRouter);
+app.use("/api/users", userRouter);
 
 app.use(errorHandler);
 app.use(notFoundHandler);
